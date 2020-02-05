@@ -1,11 +1,19 @@
 import React from 'react'
+import Box from './styledSystem'
+import Link from './styledLink'
+import { ThemeProvider } from 'styled-components'
+import theme from './theme'
 
 class App extends React.Component {
   render() {
     return (
-      <div>
+      <ThemeProvider theme={theme}>
         <h1>Home</h1>
-      </div>
+        <Box color="black" bg="blue" p={3}>
+            Tomato
+        </Box>
+        <Link>Test Link</Link>
+      </ThemeProvider>
     )
   }
 }
